@@ -33,3 +33,12 @@ do {
   // The loop will always be executed at least once, even if the condition is false
   console.log("at least one time will run");
 } while (false);
+
+
+const mapList = [1,2,3,4,5];
+
+let newList = mapList.map(function(item){
+  return item
+})
+
+console.log('new list', newList);
