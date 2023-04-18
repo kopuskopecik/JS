@@ -31,5 +31,5 @@ for (let x of language) {
 
 do {
   // The loop will always be executed at least once, even if the condition is false
-console.log('at least one time will run')
+  console.log("at least one time will run");
 } while (false);
