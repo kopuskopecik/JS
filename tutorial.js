@@ -24,9 +24,10 @@ switch (2) {
     console.log("I am two");
     break;
   case 3:
-    console.log("I am three");
+    console.log("I am three.");
     break;
 
   default:
+    console.log('I am default version.')
     break;
 }
