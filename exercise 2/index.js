@@ -17,12 +17,12 @@ let line;
 
 books.forEach(createElements);
 
-function createElements(item) {
-  let paragraph = document.createElement("p");
+function createElements(item, index) {
+  paragraph = document.createElement("p");
   paragraph.textContent = `${item.title} - ${item.author} ${
     item.alreadyRead ? "I read" : "I did not read"
   }`;
-  let line = document.createElement("hr");
+  line = document.createElement("hr");
 
   main.appendChild(paragraph);
   main.appendChild(line);
