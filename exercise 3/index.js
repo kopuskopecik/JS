@@ -16,21 +16,24 @@ var books = [
 const unorderedList = document.querySelector("ul");
 let listElement;
 let image;
+let nodeElement;
 
 books.forEach(createElements);
 
 function createElements(item, index) {
   listElement = document.createElement("li");
-  listElement.textContent = `${item.title} - ${item.author} ${
-    item.alreadyRead ? "I read" : "I did not read"
-  }`;
+
 
   image = document.createElement("img");
   image.setAttribute("src", item.img);
   image.setAttribute("alt", item.title);
   image.setAttribute("width", "100px");
 
-  unorderedList.appendChild(image);
+  nodeElement = document.createTextNode(`${item.title} - ${item.author} ${
+    item.alreadyRead ? "I read" : "I did not read"
+  }`)
+  listElement.appendChild(image);
+  listElement.appendChild(document.createElement("br"));
+  listElement.appendChild(nodeElement);
   unorderedList.appendChild(listElement);
-  unorderedList.appendChild(document.createElement("hr"));
 }
