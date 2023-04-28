@@ -17,6 +17,7 @@ const unorderedList = document.querySelector("ul");
 let listElement;
 let image;
 let nodeElement;
+let spanElement;
 
 books.forEach(createElements);
 
@@ -29,11 +30,15 @@ function createElements(item, index) {
   image.setAttribute("alt", item.title);
   image.setAttribute("width", "100px");
 
-  nodeElement = document.createTextNode(`${item.title} - ${item.author} ${
-    item.alreadyRead ? "I read" : "I did not read"
-  }`)
+  nodeElement = document.createTextNode(`${item.title} - ${item.author}`);
+  spanElement = document.createElement('span');
+  spanElement.textContent = `${item.alreadyRead ? " I read" : " I did not read"}`;
+  spanElement.style.color = 'red';
+  
+  console.log(nodeElement);
   listElement.appendChild(image);
   listElement.appendChild(document.createElement("br"));
   listElement.appendChild(nodeElement);
+  listElement.appendChild(spanElement);
   unorderedList.appendChild(listElement);
 }
