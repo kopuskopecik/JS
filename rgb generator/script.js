@@ -9,7 +9,6 @@ const callEvents = ()=>{
 }
 
 const changeBackgroundColor = (event)=>{
-    console.log(event.target)
     const redValue = Number(red.value);
     const greenValue = Number(green.value);
     const blueValue = Number(blue.value);
