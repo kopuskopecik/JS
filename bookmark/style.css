@@ -1,0 +1,52 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+form {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+div{
+    padding: 10px;
+}
+
+h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+a{
+    border: solid;
+    text-decoration: none;
+    border-color: blue;
+    padding: 3px;
+}
+
+button {
+    border: solid;
+    text-decoration: none;
+    border-color: red;
+    padding: 3px;
+    font-size: medium;
+}
+
+input{
+    width: 70%;
+    margin: 5px;
+    padding: 5px;
+}
+
+button[type=submit]{
+    border-color: green;
+}
+
